@@ -290,6 +290,7 @@ MonoBehaviour:
   isUIOpen: 0
   plants:
   - {fileID: 8718564801445547668, guid: e6231a90b27a1bf4f87566e9b4a2a715, type: 3}
+  - {fileID: 1558504041217490527, guid: 4b68a6eae4cf27042a588dd88d1332d2, type: 3}
 --- !u!4 &342660683
 Transform:
   m_ObjectHideFlags: 0

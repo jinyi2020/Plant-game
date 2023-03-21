@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 8718564801445547672}
   - component: {fileID: 8718564801445547671}
   - component: {fileID: 8718564801445547669}
-  - component: {fileID: 2281622373736629209}
+  - component: {fileID: 433852547060657735}
   m_Layer: 0
   m_Name: Plant Base
   m_TagString: Untagged
@@ -623,8 +623,8 @@ MonoBehaviour:
   buyPrice: 1
   plantName: Daikon
   image: {fileID: 21300000, guid: 8f918b2ba0b937d498c13a7762e4eef5, type: 3}
---- !u!136 &2281622373736629209
-CapsuleCollider:
+--- !u!65 &433852547060657735
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -633,10 +633,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 3.2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.42, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.573926, y: 3.0650868, z: 1}
+  m_Center: {x: -0.057551265, y: 0.47622633, z: 0}
 --- !u!1001 &8863814642498535197
 PrefabInstance:
   m_ObjectHideFlags: 0

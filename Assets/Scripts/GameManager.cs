@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject plantPrefab;
-    
+    public GameObject plantPrefab = null;
+    public bool IsPlanting = false;
+    public string plantModeImageName = "Plant Mode Image";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,13 @@ public class GameManager : MonoBehaviour
     {
         panel.SetActive(false);
         GameData.Instance.isUIOpen = false;
+    }
+
+    public void StopPlant()
+    {
+        IsPlanting = false;
+        plantPrefab = null;
+        GameObject.Find("Canvas").transform.Find(plantModeImageName).gameObject.SetActive(false);
     }
 
 }

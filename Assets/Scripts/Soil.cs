@@ -22,7 +22,7 @@ public class Soil : MonoBehaviour
     private void OnMouseDown()
     {
         // Debug.Log("Clicked down");
-        if (!GameData.Instance.isUIOpen)
+        if (GameObject.Find("Game Manager").GetComponent<GameManager>().IsPlanting && !GameData.Instance.isUIOpen)
         {
             if (plant == null)
             {
