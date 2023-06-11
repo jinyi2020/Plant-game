@@ -291,6 +291,9 @@ MonoBehaviour:
   plants:
   - {fileID: 8718564801445547668, guid: e6231a90b27a1bf4f87566e9b4a2a715, type: 3}
   - {fileID: 1558504041217490527, guid: 4b68a6eae4cf27042a588dd88d1332d2, type: 3}
+  - {fileID: 1847319511529556075, guid: 743a94e5afb59ce4cafcf5716aa8578c, type: 3}
+  exp: 0
+  level: 0
 --- !u!4 &342660683
 Transform:
   m_ObjectHideFlags: 0

@@ -12,9 +12,12 @@ public class Plant : MonoBehaviour
     public Canvas canvas;
     private Slider timerSlider;
     private GameObject mainCamara;
+    public GameObject seed;
+    public GameObject fullGrow;
 
 
     
+    public int timeHour, timeMinute, timeSecond;
     private TimeSpan growTimeSpan = new TimeSpan(0, 0, 3);
     private float growTime;
     private float currentTime = 0;
@@ -22,19 +25,25 @@ public class Plant : MonoBehaviour
     private GameManager gameManager;
     public int sellPrice = 10;
     public int buyPrice = 1;
+    public int expToEarn = 10;
     public string plantName = "Daikon";
     public Sprite image;
+    public ParticleSystem fullGrowEffect;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         mainCamara = GameObject.Find("Main Camera");
-        
+        growTimeSpan = new TimeSpan(timeHour, timeMinute, timeSecond);
+
         timerSlider = timerSliderObject.GetComponent<Slider>();
         growTime = (float)growTimeSpan.TotalSeconds;
         timerText.enabled = true;
         timerSliderObject.SetActive(true);
         StartCoroutine(Grow());
+        seed.SetActive(true);
+        fullGrow.SetActive(false);
+        fullGrowEffect.Stop();
         
     }
 
@@ -48,6 +57,12 @@ public class Plant : MonoBehaviour
             currentTime += Time.deltaTime;
             UpdateTimer();
         }
+        if (currentTime > growTime/2) {
+            fullGrow.SetActive(true);
+            seed.SetActive(false);
+        }
+
+
     }
 
     IEnumerator Grow()
@@ -70,6 +85,7 @@ public class Plant : MonoBehaviour
     {
         timerText.enabled = false;
         timerSliderObject.SetActive(false);
+        fullGrowEffect.Play();
         isComplete = true;
         Debug.Log("grow complete");
     }

@@ -15,6 +15,8 @@ public class MainCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*
         if (!GameData.Instance.isUIOpen)
         {
             transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * speed * Time.deltaTime);
@@ -26,6 +28,11 @@ public class MainCamera : MonoBehaviour
                 
             }
         }
-        
+        */
+
+        // transform.position += Vector3.forward * Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        // transform.position += Vector3.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+
+
     }
 }
